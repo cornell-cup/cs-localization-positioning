@@ -66,20 +66,16 @@ def makeCode(placement, x, y, direction):
 		y -= 1
 
 	# Getting the direction the code is facing
-	if direction == 'E':
+	if direction == 'S':
 		image[1500:1800, 1800:2100] = 0
 		image[1800:2100, 1500:1800] = 0
-		img_name += "E"
-	elif direction == 'S':
+	elif direction == 'W':
 		image[1500:1800, 1800:2400] = 0
 		image[1800:2400, 1500:1800] = 0
-		img_name += "S"
-	elif direction == 'W':
+	elif direction == 'E':
 		image[1500:1800, 2100:2400] = 0
 		image[2100:2400, 1500:1800] = 0
-		img_name += "W"
-	else:
-		img_name += "N"
+	img_name += direction
 
 	img_name += ".png"
 
